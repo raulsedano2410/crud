@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfc;
+    background-image: radial-gradient(#c4bceb 0.5px, #fcfcfc 0.5px);
+    background-size: 10px 10px;
+
+}
+
+button {
+    border: none;
+}
+
+.App {
+    min-height: 100vh;
+    max-width: 75vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.div-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 2em 2em 4em 2em;
+}
+
+.title {
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.newUserButton {
+    font-weight: 400;
+    border: none;
+    padding: .7em 1.3em;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    gap: .5em;
+    font-size: 1rem;
+    display: flex;
+    background-color: #555A88;
+    color: #fff;
+    cursor: pointer;
+}
+
+.newUserButton:hover {
+    background-color: #7d83b4;
+}
+
+.newUserButton svg {
+    width: 20px;
+    height: 20px;
+}
+
+.newUserButton p {
+    display: block;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+    min-height: 80vh;
+    width: 100%;
+    background: #f0f0f6;
+    padding: 3em;
+    gap: 3em;
+}
+
+.card {
+    height: 274px;
+    width: 381px;
+    border: solid 1px #b8b6b6;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    padding: 1em;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__name {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.card__details {
+    font-weight: 400;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5em;
+    width: 100%;
+}
+
+.hr {
+    border-top: 1px solid #d4d3d3;
+}
+
+.card span {
+    text-transform: uppercase;
+    color: #b5b5b5;
+}
+
+.bi-trash {
+    background: #da6d6d;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.bi-pencil {
+    border: solid 1px #9e9c9c;
+    color: #9e9c9c;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+/* ESTOS  HOVER LOS COLOQUE EN ESTE ORDEN POR SEGUIR EL DISEÑO */
+.bi-trash:hover {
+    background-color: #d31717;
+
+
+}
+
+.bi-pencil:hover {
+    background-color: #9e9c9c;
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.card__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: pulse 3s both;
+    padding: 0 1.5em 1.3em;
+}
+
+.card-form h2 {
+    text-align: start;
+    padding: 1em;
+    font-size: 1.7em;
+}
+
+.icon-name {
+    color: #D85D5D;
+    background-color: #D85D5D;
+    width: 80px;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #8888893e;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+
+.card-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+}
+
+.card-input label {
+    margin-top: 1em;
+}
+
+.card-input input {
+    margin-bottom: .5em;
+}
+
+.icon {
+    height: 30px;
+    width: 30PX;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    text-align: start;
+    padding: 1em;
+    background-color: #555A88;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    outline: none
+}
+
+.date {
+    color: #64688c;
+}
+
+input::placeholder {
+    font-weight: 400;
+}
+
+input:invalid {
+    background-color: #f5e1e1;
+}
+
+input:valid {
+    background-color: rgba(237, 239, 244, 0.769);
+}
+
+.form-buttons {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    padding: 1em 0.3em;
+}
+
+.form-buttons button {
+    width: 100%;
+    padding: .8em;
+    background: #555A88;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .1rem;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background: #6b709f;
+}
+
+.list_button {
+    width: 100%;
+    padding: .8em;
+    background: #555A88;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .1rem;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.list_button:hover {
+    background: #6b709f;
+}
+
+.card_delet {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+}
+
+@media (max-width:500px) {
+    * {
+        font-size: 12px;
+    }
+
+    .div-form-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        padding: 1em;
+    }
+
+    .newUserButton {
+        padding: .7em;
+    }
+    .newUserButton svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cards-container {
+        width: 90vw;
+        padding: 1.5em;
+        gap: 1.5em;
+    }
+    .card {
+        height: 244px;
+    }
+    input {
+        max-width: 70vw;
+    }
+}
+
